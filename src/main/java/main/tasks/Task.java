@@ -41,7 +41,13 @@ public class Task {
      * Megszámolja, hogy adott elem hányszor szerepel a tömbben.
      */
     public static int countElemInArray(int[] array, int elem) {
-        return -1;
+        int counter = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (elem == array[i]) {
+                counter++;
+            }
+        }
+        return counter;
     }
 
     /**
