@@ -1,5 +1,7 @@
 package main.tasks;
 
+import main.WithoutTest;
+
 public class Task {
 
     /**
@@ -8,11 +10,18 @@ public class Task {
      * Biztos lehetsz benne, hogy a bemeneti paraméterként kapott n értéke pozitív egész szám.
      */
     public static int findNthPrime(int n) {
-        /*
-        használd a WithoutTest osztályban lévő isPrime metódust - például így:
-        boolean isPrime = WithoutTest.isPrime(2);
-         */
-        return -1;
+        int prime = 0;
+        int counter = 0;
+        int i = 2;
+        while (counter < n) {
+            boolean isPrime = WithoutTest.isPrime(i);
+            if (isPrime == true) {
+                prime = i;
+                counter++;
+            }
+            i++;
+        }
+        return prime;
     }
 
     /**
